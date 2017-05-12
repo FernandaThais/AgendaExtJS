@@ -10,8 +10,8 @@ Ext.define('AgendaExtJS.view.main.Main', {
     xtype: 'app-main',
 
     requires: [
-        'Ext.plugin.Viewport',
-        'Ext.window.MessageBox',
+        'Ext.button.Button',
+        'Ext.form.field.Text',
 
         'AgendaExtJS.view.main.MainController',
         'AgendaExtJS.view.main.MainModel'
@@ -20,8 +20,24 @@ Ext.define('AgendaExtJS.view.main.Main', {
     controller: 'main',
     viewModel: 'main',
 
+    id: 'main-panel',
+
     title: 'Main',
 
-    html: 'Hello World!'
+    defaults: {
+        margin: 5
+    },
+
+    layout: 'hbox',
+
+    items: [{
+        xtype: 'button',
+        bind: {
+            text: '{textoBotao}'
+        }
+    }, {
+        xtype: 'textfield',
+        bind: '{textoBotao}'
+    }]
     
 });

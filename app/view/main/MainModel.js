@@ -6,7 +6,9 @@ Ext.define('AgendaExtJS.view.main.MainModel', {
 
     alias: 'viewmodel.main',
 
-    data: {}
+    data: {
+    	textoBotao: 'Olá Mundo ViewModel!'
+    }
 
     //TODO - add data, formulas and/or methods to support your view
 });
